@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ram="$(free -m | awk '/^Mem:/ {print $3 "/" $2}')"
+echo -e "$ram MB"
