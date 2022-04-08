@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+"""Taken from https://github.com/Jvanrhijn/polybar-spotify"""
+
 import sys
 import dbus
 import argparse
