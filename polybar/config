@@ -24,7 +24,7 @@ background-alt = #333333
 foreground = #dfdfdf
 foreground-alt = #8c8c8c
 primary = #65a5c2
-secondary = #1983cf
+secondary = #1f7399
 alert = #0064e6
 
 [bar/example]
