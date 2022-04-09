@@ -24,7 +24,7 @@ background-alt = #333333
 foreground = #dfdfdf
 foreground-alt = #8c8c8c
 primary = #65a5c2
-secondary = #0064e6
+secondary = #1983cf
 alert = #0064e6
 
 [bar/example]
@@ -35,7 +35,7 @@ height = 30
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 6.0
-fixed-center = false
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -43,25 +43,25 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 5
+border-size = 8
 border-color = #00000000
 
 padding-left = 0
-padding-right = 2
+padding-right = 0
 
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
 font-0 = NotoSansMono Nerd Font:pixelsize=11;2
 font-1 = "Roboto:size=10:weight=bold;1"
 font-2 = "Noto Sans:size=10;1"
 
 modules-left = dwm
-modules-center = mpd 
+modules-center = xwindow 
 modules-right = spotify memory pulseaudio date powermenu
 
 tray-position = right
-tray-padding = 2
+tray-padding = 1
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
@@ -96,7 +96,7 @@ click-middle = playerctl --player=spotify play-pause
 
 [module/dwm]
 type = internal/dwm
-format = <label-tags> <label-layout> <label-floating> <label-title>
+format = <label-tags> <label-layout> <label-floating>
 ; Path to dwm socket (default: /tmp/dwm.sock)
 ; socket-path = /tmp/dwm.sock
 
@@ -137,9 +137,9 @@ label-title-maxlen = 30
 ; Available tokens:
 ;   %symbol%
 label-layout = %symbol%
-label-layout-padding = 2
-label-layout-foreground = #000
-label-layout-background = ${colors.primary}
+label-layout-padding = 3
+label-layout-foreground = #fff
+label-layout-background = ${colors.secondary}
 
 ; Text to show when currently focused window is floating
 label-floating = F
@@ -150,8 +150,8 @@ label-floating = F
 
 ; focused = Selected tag on focused monitor
 label-focused = %name%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.secondary}
+label-focused-background = ${colors.secondary}
+label-focused-underline= ${colors.background-alt}
 label-focused-padding = 2
 
 ; unfocused = Unselected tag on unselected monitor
@@ -160,8 +160,8 @@ label-unfocused-padding = 2
 
 ; visible = Unselected tag, but occupied tag on any monitor
 label-visible = %name%
-label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${colors.primary}
+label-visible-background = ${colors.background-alt}
+label-visible-underline = ${colors.background-alt}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Unselected tag with window that has urgency hint set
@@ -174,19 +174,6 @@ label-urgent-padding = 2
 label-empty = %name%
 label-empty-background = ${colors.primary}
 label-empty-padding = 2
-
-[module/mpd]
-type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-
-label-song-maxlen = 25
-label-song-ellipsis = true
 
 [module/memory]
 type = internal/memory
