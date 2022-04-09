@@ -150,7 +150,7 @@ label-floating = F
 
 ; focused = Selected tag on focused monitor
 label-focused = %name%
-label-focused-background = ${colors.secondary}
+label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.background-alt}
 label-focused-padding = 2
 
@@ -160,8 +160,8 @@ label-unfocused-padding = 2
 
 ; visible = Unselected tag, but occupied tag on any monitor
 label-visible = %name%
-label-visible-background = ${colors.background-alt}
-label-visible-underline = ${colors.background-alt}
+label-visible-background = ${colors.secondary}
+label-visible-underline = ${colors.secondary}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Unselected tag with window that has urgency hint set
