@@ -1,0 +1,15 @@
+# Screenshot
+super + shift + p
+  gnome-screenshot -i
+
+# Firefox
+super + shift + f
+  firefox
+
+# Neovim
+super + shift + n
+  alacritty -e nvim
+
+# Dolphin
+super + shift + d
+  dolphin
